@@ -1,0 +1,507 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo  {
+    height: 5rem;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: transform 1s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition:  0.5s;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+}
+
+nav ul li .planos {
+    background-color: #bea77b;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #bea77b;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Carrossel de fundo */
+.hero-carousel {
+    position: absolute;
+    inset: 0;
+    display: flex;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+}
+
+.carousel-slide:nth-child(1) { background-image: url('../assets/images/IMG_0221.JPG'); }
+.carousel-slide:nth-child(2) { background-image: url('../assets/images/FUNDO_HERO.JPG'); }
+.carousel-slide:nth-child(3) { background-image: url('../assets/images/Interior_da_barbearia.jpg'); }
+
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.2) 100%);
+}
+
+/* Entra da direita (próximo) — padrão */
+.carousel-slide.enter-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Entra da esquerda (anterior) */
+.carousel-slide.enter-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Sai para a esquerda (quando avança) */
+.carousel-slide.exit-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Sai para a direita (quando volta) */
+.carousel-slide.exit-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* Barra de controles: setas + pontos juntos na parte inferior */
+.carousel-controls {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.carousel-arrow {
+    background: rgba(190, 167, 123, 0.3);
+    border: 0.125rem solid #bea77b;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+    background: rgba(190, 167, 123, 0.75);
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Pontos indicadores */
+.carousel-dots {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    border: 0.125rem solid #bea77b;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #bea77b;
+}
+
+/* Conteúdo do hero acima do overlay de cada slide */
+.hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 37.5rem;
+}
+
+.hero .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .hero-content .cta-button {
+    background-color: #bea77b;
+    color: #000;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+    transition: 0.8s;
+    display: inline-block;
+}
+
+.hero .hero-content .cta-button:hover {
+    transform: scale(1.1);
+    background-color: #f8cd7e;
+}
+
+.plans {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.plans h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 0.625rem;
+    padding: 2rem;
+    margin: 1rem;
+    flex: 1;
+    min-width: 15.625rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-0.625rem);
+}
+
+.plan-card.featured {
+    border: 0.1875rem solid #bea77b;
+    position: relative;
+}
+
+.plan-card.featured::before {
+    content: 'Mais Popular';
+    position: absolute;
+    top: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #bea77b;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    font-weight: bold;
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.plan-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #bea77b;
+    margin-bottom: 1rem;
+}
+
+.plan-card ul {
+    margin-bottom: 2rem;
+}
+
+.plan-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.plan-card .cta-button {
+    background-color: #bea77b;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.plan-card .cta-button:hover {
+    transform: scale(1.1);
+    background-color: #f8cd7e;
+}
+
+.about {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.3);
+}
+
+.consultoria{
+    padding: 4rem 2rem;
+    color: #fff;
+    background-color: #f5f0eb;
+}
+
+.consultoria .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.consultoria .eyebrow .eyebrow-line {
+    width: 2.5rem;
+    height: 0.125rem;
+    background: var(--first-color);
+}
+
+.consultoria .eyebrow .label{
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--first-color);
+}
+
+.consultoria h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.consultoria-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+.consultoria-img {
+    width: 50vh;
+  aspect-ratio: 4/5;
+  background: var(--cream);
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 0.0625rem solid rgba(139, 38, 53, 0.1);
+}
+
+.consultoria-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.consultoria-ph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.consultoria-txt.fade { transition-delay: 0.12s; }
+
+.consultoria-txt h2 {
+  margin: 0.875rem 0 1.25rem;
+}
+.consultoria-txt p {
+    color: var(--gray);
+  margin-bottom: 1rem;
+}
+.consultoria-items {
+  margin: 1.625rem 0 2.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.consultoria-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.consultoria-dot {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  background: var(--first-color);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+.consultoria-item-txt {
+  font-size: 0.875rem;
+  color: #5a5550;
+  line-height: 1.6;
+}
+
+.consultoria a.btn-consultoria {
+  background-color: var(--first-color);
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  font-weight: bold;
+  transition: 0.8s;
+}
+
+/* .contact {
+    padding: 4rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    height: 9.375rem;
+    resize: vertical;
+} */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(1.875rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
