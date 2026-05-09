@@ -288,10 +288,12 @@ nav ul li a:hover {
 
 .plan-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 1.5rem;
     max-width: 75rem;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .plan-card {
@@ -301,9 +303,8 @@ nav ul li a:hover {
     background-color: var(--cream);
     border-radius: 0.625rem;
     padding: 2rem;
-    margin: 1rem;
-    flex: 1;
-    min-width: 15.625rem;
+    flex: 1 1 16rem;
+    max-width: 22rem;
     box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
