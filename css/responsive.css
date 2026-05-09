@@ -130,6 +130,20 @@ header {
         font-size: 1rem;
     }
 
+    /* Copa 2026 */
+    .copa-campanha {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .copa-header h2 {
+        font-size: 2rem;
+    }
+
+    .copa-plano {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
     /* The Club */
     .the-club {
         padding: 3rem 1rem;
@@ -258,6 +272,15 @@ header {
     /* The Club */
     .the-club .the-club-header h2 {
         font-size: 1.8rem;
+    }
+
+    /* Copa 2026 */
+    .copa-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .copa-plano {
+        padding: 2rem 1.5rem 1.5rem;
     }
 
     .the-club .cards-benefs-club {
