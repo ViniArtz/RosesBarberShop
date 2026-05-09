@@ -1,3 +1,30 @@
+// Pré-carregamento das imagens do carrossel
+const imagensCarrossel = [
+  'assets/images/IMG_0221.JPG',
+  'assets/images/FUNDO_HERO.JPG',
+  'assets/images/Interior_da_barbearia.jpg',
+];
+
+function precarregar(fontes) {
+  return Promise.all(
+    fontes.map(
+      src =>
+        new Promise(resolve => {
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = resolve; // não bloqueia se uma imagem falhar
+          img.src = src;
+        })
+    )
+  );
+}
+
+function ocultarTela() {
+  const tela = document.getElementById('tela-carregamento');
+  tela.classList.add('oculto');
+  tela.addEventListener('transitionend', () => tela.remove(), { once: true });
+}
+
 // Carrossel do Hero
 (function () {
   const slides = document.querySelectorAll('.carousel-slide');
@@ -90,5 +117,10 @@
   });
 
   updateArrows();
-  startAutoPlay();
+
+  // Aguarda as imagens e só então inicia o carrossel e some a tela
+  precarregar(imagensCarrossel).then(() => {
+    ocultarTela();
+    startAutoPlay();
+  });
 })();
