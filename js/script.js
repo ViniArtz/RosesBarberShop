@@ -144,6 +144,20 @@ function hideScreen() {
   nextBtn.addEventListener('click', () => { next(); resetAutoPlay(); });
   prevBtn.addEventListener('click', () => { prev(); resetAutoPlay(); });
 
+  let touchStartX = 0;
+  const hero = document.querySelector('.hero');
+
+  hero.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  hero.addEventListener('touchend', e => {
+    const delta = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) < 50) return;
+    if (delta < 0) { next(); resetAutoPlay(); }
+    else           { prev(); resetAutoPlay(); }
+  }, { passive: true });
+
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
       if (i === current) return;
