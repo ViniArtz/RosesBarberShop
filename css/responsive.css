@@ -1,320 +1,292 @@
-/* ── Header fixo no topo ─────────────────────────────── */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* ── Tablet largo (≤ 1024px) ─────────────────────────── */
 @media (max-width: 1024px) {
+  nav ul li {
+    margin-left: 1rem;
+  }
 
-    /* Nav */
-    nav ul li {
-        margin-left: 1rem;
-    }
+  nav ul li a {
+    font-size: 0.85rem;
+  }
 
-    nav ul li a {
-        font-size: 0.85rem;
-    }
+  .hero .hero-content {
+    max-width: 28rem;
+  }
 
-    /* Hero */
-    .hero .hero-content {
-        max-width: 28rem;
-    }
+  .hero .hero-content h2 {
+    font-size: 2.4rem;
+  }
 
-    .hero .hero-content h2 {
-        font-size: 2.4rem;
-    }
+  .the-club .cards-benefs-club {
+    gap: 0.5rem;
+  }
 
-    /* The Club */
-    .the-club .cards-benefs-club {
-        gap: 0.5rem;
-    }
+  .the-club .cards-benefs-club .card-benef-club {
+    min-width: 12rem;
+    padding: 1.5rem;
+  }
 
-    .the-club .cards-benefs-club .card-benef-club {
-        min-width: 12rem;
-        padding: 1.5rem;
-    }
+  .plan-cards {
+    gap: 1rem;
+  }
 
-    /* Planos */
-    .plan-cards {
-        gap: 1rem;
-    }
+  .plan-card {
+    flex-basis: 14rem;
+  }
 
-    .plan-card {
-        flex-basis: 14rem;
-    }
+  .about .about-content .about-text h2 {
+    font-size: 2rem;
+  }
 
-    /* Sobre */
-    .about .about-content .about-text h2 {
-        font-size: 2rem;
-    }
+  .consultoria .consultoria-grid {
+    gap: 1.5rem;
+  }
 
-    /* Consultoria */
-    .consultoria .consultoria-grid {
-        gap: 1.5rem;
-    }
+  .consultoria .consultoria-img {
+    width: 65%;
+    flex-shrink: 0;
+  }
 
-    .consultoria .consultoria-img {
-        width: 45%;
-        flex-shrink: 0;
-    }
-
-    .consultoria h2 {
-        font-size: 2rem;
-    }
+  .consultoria h2 {
+    font-size: 2rem;
+  }
 }
 
-/* ── Tablet / Mobile (≤ 768px) ───────────────────────── */
 @media (max-width: 768px) {
+  header {
+    padding: 0.75rem 0;
+  }
 
-    /* Header */
-    header {
-        padding: 0.75rem 0;
-    }
+  nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
 
-    nav {
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 0 1rem;
-    }
+  .logo {
+    height: 3.5rem;
+  }
 
-    .logo {
-        height: 3.5rem;
-    }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.25rem;
-    }
+  nav ul li {
+    margin-left: 0;
+  }
 
-    nav ul li {
-        margin-left: 0;
-    }
+  nav ul li a {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.5rem;
+  }
 
-    nav ul li a {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.5rem;
-    }
+  nav ul li .planos {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
 
-    nav ul li .planos {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.75rem;
-    }
+  .hero {
+    min-height: 100svh;
+    text-align: center;
+  }
 
-    /* Hero */
-    .hero {
-        min-height: 100svh;
-        text-align: center;
-    }
+  .carousel-slide {
+    padding: 6rem 1.5rem 5rem;
+    justify-content: center;
+  }
 
-    .carousel-slide {
-        padding: 6rem 1.5rem 5rem;
-        justify-content: center;
-    }
+  .carousel-slide::before {
+    background: rgba(0, 0, 0, 0.55);
+  }
 
-    .carousel-slide::before {
-        background: rgba(0, 0, 0, 0.55);
-    }
+  .hero .hero-content {
+    max-width: 100%;
+  }
 
-    .hero .hero-content {
-        max-width: 100%;
-    }
+  .hero .hero-content h2 {
+    font-size: 1.8rem;
+  }
 
-    .hero .hero-content h2 {
-        font-size: 1.8rem;
-    }
+  .hero .hero-content p {
+    font-size: 1rem;
+  }
 
-    .hero .hero-content p {
-        font-size: 1rem;
-    }
+  .copa-campanha {
+    padding: 3.5rem 1.5rem;
+  }
 
-    /* Copa 2026 */
-    .copa-campanha {
-        padding: 3.5rem 1.5rem;
-    }
+  .copa-header h2 {
+    font-size: 2rem;
+  }
 
-    .copa-header h2 {
-        font-size: 2rem;
-    }
+  .copa-plano {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 
-    .copa-plano {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+  .the-club {
+    padding: 3rem 1rem;
+  }
 
-    /* The Club */
-    .the-club {
-        padding: 3rem 1rem;
-    }
+  .the-club .cards-benefs-club {
+    gap: 1rem;
+  }
 
-    .the-club .cards-benefs-club {
-        gap: 1rem;
-    }
+  .the-club .cards-benefs-club .card-benef-club {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 
-    .the-club .cards-benefs-club .card-benef-club {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+  .plans {
+    padding: 3rem 1rem;
+  }
 
-    /* Planos */
-    .plans {
-        padding: 3rem 1rem;
-    }
+  .plans h2 {
+    font-size: 2rem;
+  }
 
-    .plans h2 {
-        font-size: 2rem;
-    }
+  .plan-cards {
+    gap: 1rem;
+  }
 
-    .plan-cards {
-        gap: 1rem;
-    }
+  .plan-card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 
-    .plan-card {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
+  .about .about-content {
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
+  }
 
-    /* Sobre */
-    .about .about-content {
-        padding: 2.5rem 1.5rem;
-        gap: 1.5rem;
-    }
+  .about .about-content .about-text {
+    flex-basis: 100%;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+  }
 
-    .about .about-content .about-text {
-        flex-basis: 100%;
-        padding-right: 0;
-        align-items: center;
-        text-align: center;
-    }
+  .about .about-content .about-text h2 {
+    font-size: 1.8rem;
+  }
 
-    .about .about-content .about-text h2 {
-        font-size: 1.8rem;
-    }
+  .about .about-content .about-image {
+    flex-basis: 100%;
+  }
 
-    .about .about-content .about-image {
-        flex-basis: 100%;
-    }
+  .consultoria {
+    padding: 3rem 1rem;
+  }
 
-    /* Consultoria */
-    .consultoria {
-        padding: 3rem 1rem;
-    }
+  .consultoria .consultoria-grid {
+    flex-direction: column;
+  }
 
-    .consultoria .consultoria-grid {
-        flex-direction: column;
-    }
+  .consultoria .consultoria-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
 
-    .consultoria .consultoria-img {
-        width: 100%;
-        aspect-ratio: 16/9;
-    }
+  .consultoria h2 {
+    font-size: 1.8rem;
+  }
 
-    .consultoria h2 {
-        font-size: 1.8rem;
-    }
+  .consultoria-txt p {
+    text-align: left;
+  }
 
-    .consultoria-txt p {
-        text-align: left;
-    }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
 
-    /* Footer */
-    footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 2rem 1rem;
-    }
+  footer img {
+    height: 3rem;
+  }
 
-    footer img {
-        height: 3rem;
-    }
-
-    footer ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-/* ── Mobile pequeno (≤ 480px) ────────────────────────── */
 @media (max-width: 480px) {
+  nav ul {
+    gap: 0.2rem;
+  }
 
-    /* Nav */
-    nav ul {
-        gap: 0.2rem;
-    }
+  nav ul li a {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.4rem;
+  }
 
-    nav ul li a {
-        font-size: 0.65rem;
-        padding: 0.3rem 0.4rem;
-    }
+  nav ul li .planos {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
 
-    nav ul li .planos {
-        font-size: 0.65rem;
-        padding: 0.3rem 0.6rem;
-    }
+  .hero .hero-content h2 {
+    font-size: 1.4rem;
+  }
 
-    /* Hero */
-    .hero .hero-content h2 {
-        font-size: 1.4rem;
-    }
+  .hero .hero-content p {
+    font-size: 0.9rem;
+  }
 
-    .hero .hero-content p {
-        font-size: 0.9rem;
-    }
+  .hero .hero-content .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
 
-    .hero .hero-content .cta-button {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.9rem;
-    }
+  .the-club .the-club-header h2 {
+    font-size: 1.8rem;
+  }
 
-    /* The Club */
-    .the-club .the-club-header h2 {
-        font-size: 1.8rem;
-    }
+  .copa-header h2 {
+    font-size: 1.6rem;
+  }
 
-    /* Copa 2026 */
-    .copa-header h2 {
-        font-size: 1.6rem;
-    }
+  .copa-plano {
+    padding: 2rem 1.5rem 1.5rem;
+  }
 
-    .copa-plano {
-        padding: 2rem 1.5rem 1.5rem;
-    }
+  .the-club .cards-benefs-club {
+    gap: 0.75rem;
+  }
 
-    .the-club .cards-benefs-club {
-        gap: 0.75rem;
-    }
+  .the-club .cards-benefs-club .card-benef-club {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
 
-    .the-club .cards-benefs-club .card-benef-club {
-        flex-basis: 100%;
-        max-width: 100%;
-        padding: 1.5rem;
-    }
+  .plans h2 {
+    font-size: 1.6rem;
+  }
 
-    /* Planos */
-    .plans h2 {
-        font-size: 1.6rem;
-    }
+  .plan-card {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
 
-    .plan-card {
-        flex-basis: 100%;
-        max-width: 100%;
-        padding: 1.5rem;
-    }
+  .about .about-content .about-text h2 {
+    font-size: 1.6rem;
+  }
 
-    /* Sobre */
-    .about .about-content .about-text h2 {
-        font-size: 1.6rem;
-    }
+  .consultoria h2 {
+    font-size: 1.6rem;
+  }
 
-    /* Consultoria */
-    .consultoria h2 {
-        font-size: 1.6rem;
-    }
-
-    .consultoria .consultoria-img {
-        aspect-ratio: 4/3;
-    }
+  .consultoria .consultoria-img {
+    aspect-ratio: 4/3;
+  }
 }

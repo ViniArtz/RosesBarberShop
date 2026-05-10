@@ -177,7 +177,6 @@ nav ul li a:hover {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Pontos indicadores */
 .carousel-dots {
   display: flex;
   gap: 0.6rem;
@@ -661,10 +660,9 @@ nav ul li a:hover {
 }
 
 .consultoria .consultoria-grid {
+  display: flex;
   margin: 0 auto;
   max-width: 75rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
 }
@@ -764,6 +762,10 @@ footer ul li a {
 
 footer ul li a:hover {
   color: var(--gold);
+}
+footer .developer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @keyframes fadeInUp {
