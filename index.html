@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +26,11 @@
   </head>
   <body>
     <div id="tela-carregamento">
-      <img src="./assets/svg/Logo barbearia e Clube.svg" alt="logo" class="loading-logo" />
+      <img
+        src="./assets/svg/Logo barbearia e Clube.svg"
+        alt="logo"
+        class="loading-logo"
+      />
       <div class="loading-spinner"></div>
     </div>
 
@@ -48,12 +55,16 @@
       <div class="hero-carousel">
         <div class="carousel-slide active">
           <div class="hero-content">
-            <h2>Transforme Seu Visual com Nossos Planos de Assinatura</h2>
+            <div class="hero-copa-eyebrow">
+              <i class="fa-solid fa-futbol"></i>
+              <span>Plano Seleção — Copa do Mundo 2026</span>
+            </div>
+            <h2>Escalação confirmada: você titular no estilo.</h2>
             <p>
-              Cortes premium, barba impecável e cuidados especiais todos os
-              meses. Assine agora e economize!
+              Descontos especiais nos planos durante a Copa. Assine agora e
+              garanta o seu.
             </p>
-            <a href="#planos" class="cta-button">Ver Planos</a>
+            <a href="#copa-2026" class="cta-button">Ver Promoção</a>
           </div>
         </div>
         <div class="carousel-slide">
@@ -100,8 +111,13 @@
             <i class="fa-solid fa-futbol"></i>
             <span>Plano Seleção — Copa do Mundo 2026</span>
           </div>
-          <h2>Escala confirmada:<br /><span>você titular no estilo.</span></h2>
-          <p>Assine ou renove durante o período da Copa e garanta condições especiais no seu plano.</p>
+          <h2>
+            Escalação confirmada:<br /><span>você titular no estilo.</span>
+          </h2>
+          <p>
+            Assine ou renove durante o período da Copa e garanta condições
+            especiais no seu plano.
+          </p>
         </div>
 
         <div class="copa-planos">
@@ -117,7 +133,9 @@
             <i class="fa-solid fa-crown"></i>
             <h3>Plano Cabelo e Barba</h3>
             <p>Cabelo + Barba ilimitados</p>
-            <span class="copa-detalhe">15% OFF na primeira mensalidade + brinde temático</span>
+            <span class="copa-detalhe"
+              >15% OFF na primeira mensalidade + brinde temático</span
+            >
           </div>
           <div class="copa-plano">
             <div class="copa-badge">10% OFF</div>
@@ -134,12 +152,14 @@
 
     <section id="the-club" class="the-club">
       <div class="the-club-header">
-        <h2>Não é barbearia, 
+        <h2>
+          Não é barbearia,
           <span>é um clube.</span>
         </h2>
         <p>
-          sem filas, sem supresa no preço, Estilo garantido sempre.
-          garanta agora o seu plano de assinatura e tenha acesso a cortes de cabelo e barba.
+          sem filas, sem supresa no preço, Estilo garantido sempre. garanta
+          agora o seu plano de assinatura e tenha acesso a cortes de cabelo e
+          barba.
         </p>
       </div>
       <div class="cards-benefs-club">
@@ -166,14 +186,14 @@
             Participe de eventos exclusivos para assinantes, como workshops,
             lançamentos de produtos e encontros com especialistas em estilo.
           </p>
-        </div> 
+        </div>
       </div>
     </section>
 
     <section id="planos" class="plans">
       <h2>Nossos Planos de Assinatura</h2>
       <div class="plan-cards">
-        <div class="plan-card">
+        <div class="plan-card" data-copa-desconto="10">
           <h3>Plano Corte</h3>
           <p>R$ 99,90/mês</p>
           <ul>
@@ -183,9 +203,14 @@
             <li>Eventos Exclusivos para assinantes</li>
             <li>Você impecável sempre.</li>
           </ul>
-          <a class="cta-button" href="https://wa.me/5585921306928?text=Ol%C3%A1%2C%20quero%20assinar%20o%20Plano%20Corte!" target="_blank">Assinar Agora</a>
+          <a
+            class="cta-button"
+            href="https://wa.me/5585921306928?text=Ol%C3%A1%2C%20quero%20assinar%20o%20Plano%20Corte!"
+            target="_blank"
+            >Assinar Agora</a
+          >
         </div>
-        <div class="plan-card featured">
+        <div class="plan-card featured" data-copa-desconto="15" data-copa-brinde>
           <h3>Plano Corte e Barba</h3>
           <p>R$ 189,90/mês</p>
           <ul>
@@ -195,9 +220,14 @@
             <li>Eventos Exclusivos para assinantes</li>
             <li>Você impecável sempre.</li>
           </ul>
-          <a class="cta-button" href="https://wa.me/5585921306928?text=Ol%C3%A1%2C%20quero%20assinar%20o%20Plano%20Corte%20e%20Barba!" target="_blank">Assinar Agora</a>
+          <a
+            class="cta-button"
+            href="https://wa.me/5585921306928?text=Ol%C3%A1%2C%20quero%20assinar%20o%20Plano%20Corte%20e%20Barba!"
+            target="_blank"
+            >Assinar Agora</a
+          >
         </div>
-        <div class="plan-card">
+        <div class="plan-card" data-copa-desconto="10">
           <h3>Plano Barba</h3>
           <p>R$ 119,90/mês</p>
           <ul>
@@ -207,7 +237,12 @@
             <li>Eventos Exclusivos para assinantes</li>
             <li>Você impecável sempre.</li>
           </ul>
-          <a class="cta-button" href="https://wa.me/5585921306928?text=Ol%C3%A1%2C%20quero%20assinar%20o%20Plano%20Barba!" target="_blank">Assinar Agora</a>
+          <a
+            class="cta-button"
+            href="https://wa.me/5585921306928?text=Ol%C3%A1%2C%20quero%20assinar%20o%20Plano%20Barba!"
+            target="_blank"
+            >Assinar Agora</a
+          >
         </div>
       </div>
     </section>
@@ -289,11 +324,24 @@
     <section id=""></section>
 
     <footer>
-      <img src="./assets/svg/Logo barbearia e Clube.svg" alt="logo da barbearia e clube de assinatura" />
+      <img
+        src="./assets/svg/Logo barbearia e Clube.svg"
+        alt="logo da barbearia e clube de assinatura"
+      />
       <ul class="social-links">
-        <li><a href="https://www.instagram.com/rosesbarbershopce/" target="_blank">Instagram</a></li>
-        <li><a href="https://wa.me/5585921306928" target="_blank">Whatsapp</a></li>
-        <li><a href="https://cashbarber.com.br/rosesbarbershop" target="_blank">CashBarber</a></li>
+        <li>
+          <a href="https://www.instagram.com/rosesbarbershopce/" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a href="https://wa.me/5585921306928" target="_blank">Whatsapp</a>
+        </li>
+        <li>
+          <a href="https://cashbarber.com.br/rosesbarbershop" target="_blank"
+            >CashBarber</a
+          >
+        </li>
       </ul>
       <p>&copy; 2017 RosesBarberShop. Todos os direitos reservados.</p>
     </footer>
