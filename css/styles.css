@@ -667,8 +667,7 @@ nav ul li a:hover {
   align-items: center;
 }
 .consultoria .consultoria-img {
-  flex: 1 1 18rem;
-  max-width: 28rem;
+  flex: 0 0 30%;
   aspect-ratio: 4/5;
   background: var(--cream);
   border-radius: 2rem;

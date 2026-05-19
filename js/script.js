@@ -6,15 +6,7 @@
     const hasGift = card.hasAttribute('data-copa-brinde');
 
     const priceEl = card.querySelector('p');
-    const priceText = priceEl.textContent.trim();
-    const valueStr = priceText.replace(/[^\d,]/g, '').replace(',', '.');
-    const originalValue = parseFloat(valueStr);
-    const discountedValue = originalValue * (1 - discount / 100);
-
-    const formatted = discountedValue.toLocaleString('pt-BR', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
+    const formatted = card.dataset.copaPreco;
 
     const banner = document.createElement('div');
     banner.className = 'copa-plano-banner';
